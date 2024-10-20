@@ -38,15 +38,59 @@ Before running the project, ensure you have the following installed:
 
 ### Steps to Set Up
 
+
 1. **Clone the Repository:**
    ```bash
    git clone https://github.com/your-username/multilanguage-invoice-extractor.git
    cd multilanguage-invoice-extractor
-   
+
 2. **Create a Virtual Environment (Optional but Recommended):**
+    ```bash
+   python3 -m venv env
+   source env/bin/activate    # On Windows: env\Scripts\activate
 
-```bash
-python3 -m venv env
-source env/bin/activate    # On Windows: env\Scripts\activate
+3.  **Install Dependencies:**
+    ```bash
+      pip install -r requirements.txt
 
+4. **Set Up Environment Variables:**
+   - Create a .env file in the root directory and add your Google API key:
+   ```bash
+   GOOGLE_API_KEY=your_google_api_key
+
+5. **Download and Install Required Python Libraries:**
+   - If requirements.txt is missing, manually install the packages:
+   ```bash
+   pip install streamlit pillow python-dotenv google-generativeai
+
+### How to Run the Project
+
+1. After installing all dependencies and setting up the .env file, start the Streamlit app using the following command:
+    ```bash
+    streamlit run app.py
+
+2. Open a browser window and go to http://localhost:8501 (Streamlit will usually auto-open it).
+
+3. You will see the MultiLanguage Invoice Extractor interface. From there, you can:
+
+   -Enter a prompt or question about the invoice.
+   -Upload an invoice image in the form of JPG, JPEG, or PNG.
+   -Click "Tell me about an invoice" to submit.
+
+ 4. The extracted response from Google Gemini AI will be displayed below the button.
+
+### Screenshots
+
+![Invoice Screenshot](Screenshot-1.png)
+
+![Invoice Screenshot](Screenshot-2.png)
+
+
+
+
+
+   
+
+
+   
 
